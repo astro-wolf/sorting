@@ -27,8 +27,12 @@ public class ArrayIntersection {
         return getCommonByMergeSort(nums1, nums2);
     }
 
+    //region binary search method
+
+    //endregion
+
     //region merge sort method
-    public int[] getCommonByMergeSort(int[] nums1, int[] nums2) {
+    private int[] getCommonByMergeSort(int[] nums1, int[] nums2) {
         sort(0, nums1.length - 1, nums1);
         sort(0, nums2.length - 1, nums2);
         HashSet<Integer> set = new HashSet<>();
@@ -52,9 +56,7 @@ public class ArrayIntersection {
         }
         return res;
     }
-    //endregion
 
-    //region utility methods
     private void sort(int l, int r, int[] arr) {
         if (l < r) {
             int m = (l + r) / 2;
